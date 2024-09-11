@@ -7,23 +7,22 @@ from tabulate import tabulate
 
 # verifique la estructura del set de datos
 def check_df(dataframe,_flag, data, Encabezado):
-    _df=dataframe
     if _flag == 1:
       print(Encabezado)
-      print(data)
+      print(dataframe.data)
       print("*"*120)
       print("*"*120)
 
 
-descriptores= [ [_df.shape,"Shape: Dimención del dataframe"]
-               ,[_df.head(),"Head: Las primeras 5 filas del dataframe"]
-               ,[_df.tail(),"Tail: Las últimas 5 filas del dataframe"]
-               ,[_df.info(),"Info:\n"]
-               ,[_df.describe(),"Describe:\n"]
-               ,[_df.columns,"Columnas:\n"]
-               ,[_df.dtypes,"Date Type:\n"]
-               ,[_df.isnull().sum(),"Null Values:\n"]
-               ,[_df.nunique(),"Unique Values:\n"]]
+descriptores= [ [shape,"Shape: Dimención del dataframe"]
+               ,[head(),"Head: Las primeras 5 filas del dataframe"]
+               ,[tail(),"Tail: Las últimas 5 filas del dataframe"]
+               ,[info(),"Info:\n"]
+               ,[describe(),"Describe:\n"]
+               ,[columns,"Columnas:\n"]
+               ,[dtypes,"Date Type:\n"]
+               ,[isnull().sum(),"Null Values:\n"]
+               ,[nunique(),"Unique Values:\n"]]
                
 def verificar_df(data,flags=None):
     # Si no se proporcionan flags, usar [1, 1, 1, 1, 1, 1, 1, 1, 1] por defecto
