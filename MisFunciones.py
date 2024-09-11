@@ -21,7 +21,7 @@ descriptores= [ ["shape","Shape: Dimención del dataframe"]
                ,["describe()","Describe:\n"]
                ,["columns","Columnas:\n"]
                ,["dtypes","Date Type:\n"]
-               ,["isnull()".sum(),"Null Values:\n"]
+               ,["isnull().sum()","Null Values:\n"]
                ,["nunique()","Unique Values:\n"]]
                
 def verificar_df(data,flags=None):
