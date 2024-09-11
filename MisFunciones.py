@@ -14,18 +14,19 @@ def check_df(_flag, data, Encabezado):
       print("*"*120)
 
 
-descriptores= [ [df.shape,"Shape: Dimención del dataframe"]
-               ,[df.head(),"Head: Las primeras 5 filas del dataframe"]
-               ,[df.tail(),"Tail: Las últimas 5 filas del dataframe"]
-               ,[df.info(),"Info:\n"]
-               ,[df.describe(),"Describe:\n"]
-               ,[df.columns,"Columnas:\n"]
-               ,[df.dtypes,"Date Type:\n"]
-               ,[df.isnull().sum(),"Null Values:\n"]
-               ,[df.nunique(),"Unique Values:\n"]]
+descriptores= [ [_df.shape,"Shape: Dimención del dataframe"]
+               ,[_df.head(),"Head: Las primeras 5 filas del dataframe"]
+               ,[_df.tail(),"Tail: Las últimas 5 filas del dataframe"]
+               ,[_df.info(),"Info:\n"]
+               ,[_df.describe(),"Describe:\n"]
+               ,[_df.columns,"Columnas:\n"]
+               ,[_df.dtypes,"Date Type:\n"]
+               ,[_df.isnull().sum(),"Null Values:\n"]
+               ,[_df.nunique(),"Unique Values:\n"]]
                
-def verificar_df(flags=None):
+def verificar_df(flags=None,data):
     # Si no se proporcionan flags, usar [1, 1, 1, 1, 1, 1, 1, 1, 1] por defecto
+    _df=data
     if flags is None:
         flags = [1] * 9  # Crea una lista de 9 elementos con valor 1
     
