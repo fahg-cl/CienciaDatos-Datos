@@ -14,15 +14,15 @@ def check_df(dataframe,_flag, data, Encabezado):
       print("*"*120)
 
 
-descriptores= [ [shape,"Shape: Dimención del dataframe"]
-               ,[head(),"Head: Las primeras 5 filas del dataframe"]
-               ,[tail(),"Tail: Las últimas 5 filas del dataframe"]
-               ,[info(),"Info:\n"]
-               ,[describe(),"Describe:\n"]
-               ,[columns,"Columnas:\n"]
-               ,[dtypes,"Date Type:\n"]
-               ,[isnull().sum(),"Null Values:\n"]
-               ,[nunique(),"Unique Values:\n"]]
+descriptores= [ ["shape","Shape: Dimención del dataframe"]
+               ,["head()","Head: Las primeras 5 filas del dataframe"]
+               ,["tail()","Tail: Las últimas 5 filas del dataframe"]
+               ,["info()","Info:\n"]
+               ,["describe()","Describe:\n"]
+               ,["columns","Columnas:\n"]
+               ,["dtypes","Date Type:\n"]
+               ,["isnull()".sum(),"Null Values:\n"]
+               ,["nunique()","Unique Values:\n"]]
                
 def verificar_df(data,flags=None):
     # Si no se proporcionan flags, usar [1, 1, 1, 1, 1, 1, 1, 1, 1] por defecto
