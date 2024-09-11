@@ -6,7 +6,8 @@ import matplotlib.pyplot as plt
 from tabulate import tabulate
 
 # verifique la estructura del set de datos
-def check_df(_flag, data, Encabezado):
+def check_df(dataframe,_flag, data, Encabezado):
+    _df=dataframe
     if _flag == 1:
       print(Encabezado)
       print(data)
@@ -24,14 +25,13 @@ descriptores= [ [_df.shape,"Shape: Dimención del dataframe"]
                ,[_df.isnull().sum(),"Null Values:\n"]
                ,[_df.nunique(),"Unique Values:\n"]]
                
-def verificar_df(flags=None,data):
+def verificar_df(data,flags=None):
     # Si no se proporcionan flags, usar [1, 1, 1, 1, 1, 1, 1, 1, 1] por defecto
-    _df=data
     if flags is None:
         flags = [1] * 9  # Crea una lista de 9 elementos con valor 1
     
     for i, flag in enumerate(flags):
-        check_df(flag, descriptores[i][0], descriptores[i][1])
+        check_df(data,flag, descriptores[i][0], descriptores[i][1])
     
     
 def metricas(conf_matrix):
