@@ -4,7 +4,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from tabulate import tabulate
- 
+
 # verifique la estructura del set de datos
 def check_df(dataframe,_flag, data, Encabezado):
     if _flag == 1:
